@@ -1,0 +1,3 @@
+[submodule "www/wiki-pages"]
+	path = www/wiki-pages
+	url = https://github.com/ufront/ufront.wiki.git
