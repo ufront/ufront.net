@@ -1,0 +1,19 @@
+<section class="section swatch-red-white">
+	<div class="container">
+		<header class="section-header underline">
+			<h1 class="headline hyper hairline">@feature.name</h1>
+			<h3>@feature.description</h3>
+		</header>
+	</div>
+</section>
+<section class="section swatch-white-red has-top">
+	<div class="container">
+		@feature.content
+
+		<hr>
+
+		@if (feature.previous!=null) { <a href="@baseUri@feature.previous" class="pushstate">Previous</a> }
+		@if (feature.previous!=null && feature.next!=null) { | }
+		@if (feature.next!=null) { <a href="@baseUri@feature.next" class="pushstate">Next</a> }
+	</div>
+</section>

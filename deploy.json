@@ -1,0 +1,36 @@
+{
+	"files": [
+		"assets/",
+		"js/",
+		"view/",
+		"index.n",
+		".htaccess"
+	],
+	"targets": [
+		{
+			"name": "ufront.net",
+			"gitRepo": "ssh://root@ufront.net:2287/var/www/ufront/ufrontwebsite.git",
+			"defines": ["deploy"],
+			"hxmls": ["server","client"],
+			"debug": false,
+			"servers": [{
+				"name": "Rackspace server",
+				"user": "root",
+				"host": "ufront.net",
+				"port": 2287,
+				"remoteDir": "/var/www/ufront/www/"
+			}]
+		}
+	],
+	"hooks": {
+		"beforeBuild": [],
+		"afterBuild": [],
+		"beforeCopy": [],
+		"afterCopy": [],
+		"beforePush": [],
+		"afterPush": [],
+		"beforePull": [],
+		"afterPull": ["touch index.n"],
+		"afterComplete": []
+	}
+}

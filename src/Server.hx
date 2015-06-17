@@ -1,0 +1,23 @@
+import ufront.MVC;
+import site.home.HomeController;
+import site.SiteApi;
+
+class Server {
+	static var ufApp:UfrontApplication;
+
+	static function main() {
+		var errHandler = new ErrorPageHandler();
+		errHandler.renderErrorPage = function( title:String, content:String ):String {
+			return CompileTime.interpolateFile( "site/ErrorPage.html" );
+		}
+
+		ufApp = new UfrontApplication({
+			indexController: HomeController,
+			remotingApi: SiteApi,
+			defaultLayout: "layout.html",
+			errorHandlers: [errHandler]
+		});
+		// ufApp.useModNekoCache();
+		ufApp.executeRequest();
+	}
+}

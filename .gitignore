@@ -1,0 +1,8 @@
+# Generated files.
+www/index.n
+www/tasks.n
+www/js/app.js
+doc/*.xml
+deploy/
+
+# Misc files.

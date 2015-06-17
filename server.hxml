@@ -1,0 +1,9 @@
+-lib ufront
+-lib erazor
+-lib markdown
+-lib objectinit
+-cp src
+-main Server
+
+# Neko Output
+-neko www/index.n

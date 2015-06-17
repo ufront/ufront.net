@@ -1,0 +1,10 @@
+-lib ufront-client
+-lib erazor
+-lib markdown
+-lib objectinit
+-lib detox
+-cp src
+-main Client
+
+# JS Output
+-js www/js/app.js
