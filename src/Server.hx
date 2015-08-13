@@ -20,7 +20,7 @@ class Server {
 		});
 		// ufApp.useModNekoCache();
 
-		Manager.cnx = Mysql.connect( CompileTime.parseJsonFile("db.json") );
+		// Manager.cnx = Mysql.connect( CompileTime.parseJsonFile("db.json") );
 		ufApp.executeRequest();
 	}
 }
