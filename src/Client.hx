@@ -1,6 +1,5 @@
 import ufront.MVC;
 import site.home.HomeController;
-import site.FadeOutFadeInMiddleware;
 
 class Client {
 	static var jsApp:ClientJsApplication;
@@ -16,7 +15,6 @@ class Client {
 			defaultLayout: "layout.html",
 			errorHandlers: [errHandler]
 		});
-		jsApp.addMiddleware( new FadeOutFadeInMiddleware() );
 
 		jsApp.listen();
 	}
