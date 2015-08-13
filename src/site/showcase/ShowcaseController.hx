@@ -1,12 +1,11 @@
 package site.showcase;
 
 import ufront.MVC;
-import site.UfrontViewResult;
 
 class ShowcaseController extends Controller {
 	@:route("/")
 	public function list() {
-		return new UfrontViewResult({
+		return new PartialViewResult({
 			title: "Ufront Showcase"
 		});
 	}

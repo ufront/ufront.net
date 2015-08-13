@@ -2,8 +2,6 @@ package site.features;
 
 import ufront.MVC;
 import site.features.FeatureApi;
-import site.UfrontViewResult;
-using tink.CoreApi;
 
 class FeaturesController extends Controller {
 
@@ -12,7 +10,7 @@ class FeaturesController extends Controller {
 	@:route("/$featureURL")
 	public function tour( ?featureURL:String="client-and-server" ) {
 		return featureApi.getFeature( featureURL ) >> function(feature) {
-			return new UfrontViewResult({
+			return new PartialViewResult({
 				title: 'Ufront tour: ${feature.name}',
 				description: 'Ufront tour: ${feature.name} - ${feature.description}',
 				feature: feature
