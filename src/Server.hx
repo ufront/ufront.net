@@ -1,6 +1,7 @@
 import ufront.MVC;
 import site.home.HomeController;
 import site.SiteApi;
+import sys.db.*;
 
 class Server {
 	static var ufApp:UfrontApplication;
@@ -18,6 +19,8 @@ class Server {
 			errorHandlers: [errHandler]
 		});
 		// ufApp.useModNekoCache();
+
+		Manager.cnx = Mysql.connect( CompileTime.parseJsonFile("db.json") );
 		ufApp.executeRequest();
 	}
 }

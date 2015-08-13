@@ -7,3 +7,4 @@ doc/*.xml
 deploy/
 
 # Misc files.
+src/db.json
