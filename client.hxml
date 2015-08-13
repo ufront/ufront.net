@@ -3,6 +3,7 @@
 -lib markdown
 -lib objectinit
 -lib detox
+-lib cleversort
 -cp src
 -main Client
 

@@ -2,6 +2,7 @@
 	"files": [
 		"assets/",
 		"js/",
+		"css/",
 		"view/",
 		"index.n",
 		".htaccess"

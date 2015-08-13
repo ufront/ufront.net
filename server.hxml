@@ -2,6 +2,8 @@
 -lib erazor
 -lib markdown
 -lib objectinit
+-lib cleversort
+-lib ufront-ufadmin
 -cp src
 -main Server
 
