@@ -2,6 +2,7 @@
 www/index.n
 www/tasks.n
 www/js/app.js
+www/css/
 doc/*.xml
 deploy/
 

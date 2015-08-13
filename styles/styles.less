@@ -1,0 +1,57 @@
+// out: ../www/css/styles.css, sourcemap: true, compress: true
+
+.view-content-container {
+	height: 1000px;
+	position: relative;
+
+	& > div {
+		// Align the view content inside the container.
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+
+		// Set up the page transitions
+		@duration: 1s;
+		// Active state
+		transform: scale(1) translateX(0);
+		opacity: 1;
+		transition: transform @duration ease-out;
+		&.in {
+			// Non-active state
+			// opacity: 0;
+			transform: translateX(100%);
+			border: 1px solid blue;
+			transition: transform 0s ease-in, opacity 0s ease-in;
+		}
+		&.out {
+			// Non-active state
+			// opacity: 0;
+			transform: translateX(-100%);
+			border: 1px solid blue;
+			transition: transform @duration ease-in;
+		}
+	}
+}
+
+// .view-content-container {
+//
+// }
+// .transition-view-content {
+// 	transition: filter 0.5s linear;
+// 	transform-origin: top center;
+// 	transform: translate3d(0, 0, 0);
+// 	opacity: 1;
+// 	height: 100%;
+//
+// }
+// .transition-view-content.out {
+// 	filter: blur(5px);
+// 	/*transform: translateX( 100% );*/
+// }
+// .transition-view-content.in {
+// 	/* Apply this instantly, then removing the "in" class will transition out slowly. */
+// 	filter: blur(0px);
+// 	transition: filter 0s;
+// 	/*transform: translateX( -100% );*/
+// }
